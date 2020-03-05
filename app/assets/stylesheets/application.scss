@@ -111,7 +111,17 @@ h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
 		margin-top: 0;
 		color: white;
+		margin-bottom: 15px;
+	}
+
+	.post-author {
+		font-size: 1em;
+		font-family: 'Muli', sans-serif;
+		font-weight: 200;
+		margin-top: 0;
+		color: white;
 		margin-bottom: 25px;
+		
 	}
 
 	.btn-styled {
@@ -124,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 	clear: left;
 }
 
-/* Message show-page styles */
+/* Posts show-page styles */
 
 .post-show {
 	box-sizing: border-box;

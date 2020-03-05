@@ -2,6 +2,7 @@
     <div class='col-md'>
         <div class='post'>
             <h2 class= 'post-title'> <%= post.title %> </h2>
+            <h3 class= 'post-author'> Posted by: <%= post.user.email %> <%= time_ago_in_words(post.created_at)%> ago </h3>
             <%= link_to 'View Post', post_path(post), class: 'btn-styled'%>
         </div>
     </div>
