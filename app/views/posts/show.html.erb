@@ -1,19 +1,30 @@
-<h2> <%= @post.title%> </h2>
-<p> Created by: <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago </p>
-<p> <%= @post.body %> </p>
 
-<h3> Comments: </h3>
-<%= render @post.comments %>
+<div class='col-md-10 col-md-offset-1'>
+    <div class='post-show'>
+        <h2> <%= @post.title%> </h2>
+        <p class='post-author'> Created by: <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago </p>
+        <p class='post-body'> <%= @post.body %> </p>
+
+        <h3> Comments: </h3>
+        <%= render @post.comments %>
 
 
-<h4> Comment on Post: </h4>
-<%= render 'comments/form' %>
+        <h4 class='comment-on-post'> Comment on Post: </h4>
+        <%= render 'comments/form' %>
 
-<%= link_to 'Back', root_path %>
-<% if user_signed_in? %>
-    <% if @post.user_id == current_user.id %>
-        <%= link_to 'Edit', edit_post_path(@post) %>
-        <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 
-        'Are you sure you want to delete your post?'} %>
-    <% end %>
-<% end %>
+        <div class='links btn-group'>
+            <%= link_to 'Back', root_path, class:'btn btn-default' %>
+            <% if user_signed_in? %>
+                <% if @post.user_id == current_user.id %>
+                    <%= link_to 'Edit', edit_post_path(@post), class:'btn btn-default' %>
+                    <%= link_to 'Delete', post_path(@post), method: :delete, data: {confirm: 
+                    'Are you sure you want to delete your post?'}, class:'btn btn-default' %>
+                <% end %>
+            <% end %>
+        </div>
+
+        
+    </div>
+</div>
+
+
