@@ -1,5 +1,6 @@
 <% @posts.each do |post| %>
     <h2> <%= post.title %> </h2>
+    <%= link_to 'View Post', post_path(post), class: 'btn btn-default'%>
 <% end %>
 
 <%= link_to 'New Post', new_post_path%>
