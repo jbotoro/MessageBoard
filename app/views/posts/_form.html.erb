@@ -1,0 +1,7 @@
+<%# syntax to create form using simple form gem %>
+
+<%= simple_form_for @post do |form| %>
+    <%= form.input :title, label:"Post Title" %>
+    <%= form.input :body %>
+    <%= form.button :submit %>
+<% end %>
