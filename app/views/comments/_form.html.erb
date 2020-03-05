@@ -1,0 +1,6 @@
+<%# syntax to create form using simple form gem %>
+
+<%= simple_form_for([@post, @post.comments.build]) do |form| %>
+    <%= form.input :body, label:"Comment" %>
+    <%= form.button :submit %>
+<% end %>

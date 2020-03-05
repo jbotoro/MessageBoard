@@ -1,0 +1,11 @@
+<p> <%= comment.body %> </p>
+<p> Author: <%= comment.user.email%> <%= time_ago_in_words(comment.created_at)%> ago </p>
+
+
+<% if user_signed_in?%>
+    <% if comment.user_id == current_user.id %>
+        <%= link_to 'Edit', edit_post_comment_path(comment.body, comment) %>
+        <%= link_to 'Delete', post_comment_path(comment.body, comment), method: :delete,
+            data: {confirm: 'Do you really want to delete your comment?'} %>
+    <% end %>
+<% end %>
