@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
 
     before_action :find_post
     before_action :find_comment, only: [:edit, :update, :destroy]
+    # using devise, make sure user has to be logged in to comment
+    before_action :authenticate_user! 
 
     def create
         @comment = @post.comments.create(comment_params)
