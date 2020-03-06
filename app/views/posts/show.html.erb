@@ -6,7 +6,7 @@
         <p class='post-body'> <%= @post.body %> </p>
 
         <h3> Comments: </h3>
-        <%= render @post.comments %>
+        <%= render @post.comments.order('created_at ASC') %>
 
 
         <h4 class='comment-on-post'> Comment on Post: </h4>

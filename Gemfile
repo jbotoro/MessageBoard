@@ -19,6 +19,12 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails', '~> 5.1', '>= 5.1.1'
+  gem 'factory_bot', '~> 5.1', '>= 5.1.1'
+  gem 'ffaker', '~> 2.13'
+  gem 'rspec-rails', '~> 3.9'
+
+
 end
 
 group :development do
