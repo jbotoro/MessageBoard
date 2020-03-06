@@ -2,7 +2,7 @@
 <div class='col-md-10 col-md-offset-1'>
     <div class='post-show'>
         <h2> <%= @post.title%> </h2>
-        <p class='post-author'> Created by: <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago </p>
+        <p class='post-author'> Created by: <%= @post.user.name %> <%= time_ago_in_words(@post.created_at) %> ago </p>
         <p class='post-body'> <%= @post.body %> </p>
 
         <h3> Comments: </h3>

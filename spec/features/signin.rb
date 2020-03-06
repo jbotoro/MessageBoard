@@ -7,12 +7,14 @@ feature "signing up" do
         fill_in 'Password', with: user.password, match: :first
         fill_in 'Password confirmation', with: user.password_confirmation
         fill_in 'Email', with: user.email
+        fill_in 'Name', with: user.name
         click_button "Sign up"
     end
 
     def partial_fill_in
         fill_in 'Password', with: user.password, match: :first
         fill_in 'Password confirmation', with: user.password_confirmation
+        fill_in 'Name', with: user.name
         click_button "Sign up"
     end
 
@@ -27,4 +29,5 @@ feature "signing up" do
         partial_fill_in
         expect(page).to have_content("Email can't be blank")
     end
+
 end

@@ -20,6 +20,8 @@ RSpec.describe PostsController, type: :controller do
         end
     end
 
+   
+
     # scenario 'forget to add email and submit form' do
     #     visit new_user_registration_path
     #     partial_fill_in
