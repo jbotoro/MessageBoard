@@ -14,6 +14,7 @@
 
         <div class='links btn-group'>
             <%= link_to 'Back', root_path, class:'btn btn-default' %>
+            <%# only signed in users who authored the post can see edit delete buttons%>
             <% if user_signed_in? %>
                 <% if @post.user_id == current_user.id %>
                     <%= link_to 'Edit', edit_post_path(@post), class:'btn btn-default' %>

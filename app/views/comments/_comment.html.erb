@@ -4,6 +4,7 @@
     <p class='comment-author'> Posted by: <%= comment.user.name%> <%= time_ago_in_words(comment.created_at)%> ago </p>
 
     <div class='links'>
+        <%# only author of comment can delete or edit comment%>
         <% if user_signed_in?%>
             <% if comment.user_id == current_user.id %>
                 <%= link_to 'Edit', edit_post_comment_path(comment.body, comment) %>
